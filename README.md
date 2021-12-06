@@ -32,7 +32,7 @@ curl -XGET "http://localhost:8083/connectors?expand=status" | jq
 ## ksqlDB
 * Once you deploy services, connect to ksqldb-cli
 ```shell
-docker-compose exec ksqldb ksql http://ksqldb:8080
+docker-compose exec ksqldb ksql http://ksqldb:8088
 ```
 * Make sure that you established connection with ksqlDB server and see the following **Server Status: RUNNING**
 ```text
