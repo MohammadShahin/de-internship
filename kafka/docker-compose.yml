@@ -45,7 +45,7 @@ services:
     build:
       context: ./docker/mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       MYSQL_DATABASE: 'logging'
       MYSQL_USER: 'dev'
@@ -60,6 +60,7 @@ services:
     depends_on:
       - kafka
       - schema-registry
+
     ports:
       - "8083:8083"
     volumes:
@@ -176,5 +177,3 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
     ports:
       - 5431:5432
-    depends_on:
-      - ksqldb
